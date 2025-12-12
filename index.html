@@ -24,11 +24,11 @@
     <meta property="og:title" content="CineVault - Your Premium Cinema Experience" />
     <meta property="og:description" content="Discover the latest movies, find theaters near you, and plan your perfect cinema experience." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/image.png" />
+    <meta property="og:image" content="https://cinevault.live/image.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@CineVault" />
-    <meta name="twitter:image" content="/image.png" />
+    <meta name="twitter:image" content="https://cinevault.live/image.png" />
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W3XF7DX6');</script>
 <!-- End Google Tag Manager -->
-    <script type="module" crossorigin src="/assets/index-Z_9J3QkS.js"></script>
+    <script type="module" crossorigin src="/assets/index-CPiHbyyy.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B6nOVymb.css">
   </head>
 
@@ -46,7 +46,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
-
+    
+    <!-- SPA GitHub Pages redirect script -->
+    <script>
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    
   </body>
 </html>
-
