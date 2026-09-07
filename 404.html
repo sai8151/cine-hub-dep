@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Redirecting...</title>
-  <script type="text/javascript">
-    sessionStorage.redirect = location.href;
-    location.replace("/");
-  </script>
-</head>
-<body></body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages SPA redirect
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      window.location.replace(
+        "/" + search + hash + "#!" + path
+      );
+    </script>
+  </head>
+  <body></body>
 </html>
