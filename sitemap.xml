@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://cinevault.live/</loc></url>
-<url><loc>https://cinevault.live/#/movies</loc></url>
-<url><loc>https://cinevault.live/#/theaters</loc></url>
+<url><loc>https://cinevault.live/movies/</loc></url>
+<url><loc>https://cinevault.live/theaters/</loc></url>
 <url><loc>https://cinevault.live/movie/93b867b1-9a2e-46ce-a6df-2ad9b97bc4d7/</loc></url>
 <url><loc>https://cinevault.live/movie/cd8ebb51-af31-4217-a45f-55eb92055811/</loc></url>
 <url><loc>https://cinevault.live/movie/96118bfd-a424-4669-8651-3eb1b1ba1beb/</loc></url>
