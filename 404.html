@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Redirecting...</title>
+    <title>Redirecting…</title>
     <script>
-      // GitHub Pages SPA redirect
-      var path = window.location.pathname;
-      var search = window.location.search;
-      var hash = window.location.hash;
-
-      window.location.replace(
-        "/" + search + hash + "#!" + path
-      );
+      // GitHub Pages SPA fallback: remember the requested path, then load the SPA.
+      (function () {
+        var target = window.location.pathname + window.location.search;
+        try {
+          sessionStorage.setItem('cinevault_redirect', target);
+        } catch (e) {}
+        window.location.replace('/');
+      })();
     </script>
   </head>
   <body></body>

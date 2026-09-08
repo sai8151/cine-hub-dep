@@ -21,7 +21,7 @@
     <meta name="author" content="CineVault" />
     <meta name="keywords" content="new movies, upcoming movies, movies near me, movie theatres near me, movies in theatres, showtimes, movie reviews, best movies, new movies on netflix, top movies on amazon prime, best movies on disney plus" />
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"CineVault","url":"https://cinevault.live","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://cinevault.live/#/movies?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+    {"@context":"https://schema.org","@type":"WebSite","name":"CineVault","url":"https://cinevault.live","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://cinevault.live/movies?q={search_term_string}"},"query-input":"required name=search_term_string"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"CineVault","url":"https://cinevault.live","logo":"https://cinevault.live/image.png","sameAs":[]}
@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-W3XF7DX6');</script>
 <!-- End Google Tag Manager -->
-    <script type="module" crossorigin src="/assets/index-CB2fRkKO.js"></script>
+    <script type="module" crossorigin src="/assets/index-DgRBM9ad.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Cmpk_I7Q.css">
   </head>
 
@@ -53,13 +53,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     
-    <!-- SPA GitHub Pages redirect script -->
+    <!-- SPA redirect fallback (handles GitHub Pages refresh on deep links) -->
     <script>
       (function() {
-        const redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
+        var redirect = sessionStorage.getItem('cinevault_redirect');
+        if (redirect) {
+          sessionStorage.removeItem('cinevault_redirect');
+          if (redirect !== '/' && redirect.slice(-1) === '/') {
+            redirect = redirect.slice(0, -1);
+          }
+          if (redirect !== window.location.pathname) {
+            window.history.replaceState(null, null, redirect);
+          }
         }
       })();
     </script>
